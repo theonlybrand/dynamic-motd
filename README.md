@@ -1,2 +1,2 @@
 # dynamic-motd
-Dynamic MOTD for short info when logging into your linux server
+Dynamic MOTD for short information when logging into your linux server

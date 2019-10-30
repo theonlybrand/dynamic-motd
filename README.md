@@ -10,3 +10,7 @@ Dynamic MOTD for short information when logging into your linux server
 7. echo /usr/local/bin/dynmotd >> /etc/profile
 8. mkdir /etc/zsh/zprofile
 9. echo /usr/local/bin/dynmotd >> /etc/zsh/zprofile
+
+
+Upcoming changes
+- initial customizing of MOTD

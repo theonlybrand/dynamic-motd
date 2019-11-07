@@ -19,10 +19,6 @@
 #	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# First we will install the necessary packages
-apt-get update && apt-get install figlet lsb-release bc needrestart wget -y
-
-
 # ############################## SETTINGS ############################## 
 # User defined warnings (row in red)
 # if greater than this value, display corresponding line in red, otherwise in green

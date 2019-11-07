@@ -14,3 +14,4 @@ Dynamic MOTD for short information when logging into your linux server
 
 Upcoming changes
 - initial customizing of MOTD
+- CentOS support

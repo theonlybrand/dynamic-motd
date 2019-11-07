@@ -256,7 +256,7 @@ if [ $EUID -eq 0 ]; then
 		package_manager_found=1
 	elif [ -f /usr/bin/yum ]; then
 		updates=$(yum list updates | grep "http://" | wc -l) 2>/dev/null
-		updates_security=$(yum updateinfo list sec | wc -l) 2>/dev/null
+		updates_security=$(yum updateinfo list sec | grep "http://" | wc -l) 2>/dev/null
 		fi
 		package_manager_found=1
 	else

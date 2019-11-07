@@ -282,6 +282,7 @@ if [ $EUID -eq 0 ]; then
 		
 		echo -e "$status_updates$updates packages can be updated.$status_updates_security \n$updates_security updates are security updates.\n$defcolor"
 	fi
+# Der Block unterhalb wird unter CentOS nicht benötigt
 else
 	echo -e "This requires root privileges.
 	$defcolor"

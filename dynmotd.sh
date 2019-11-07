@@ -258,6 +258,11 @@ if [ $EUID -eq 0 ]; then
 			echo -e "${red}Error: Please install arch-audit from AUR$defcolor";
 		fi
 		package_manager_found=1
+	elif [ -f /usr/bin/yum ]; then
+		updates=$(yum list updates | grep "http://" | wc -l) 2>/dev/null
+		updates_security=$(yum updateinfo list security installed | wc -l) 2>/dev/null
+		fi
+		package_manager_found=1
 	else
 		echo -e "${red}Error: No command available yet for your package manager$defcolor";
 	fi

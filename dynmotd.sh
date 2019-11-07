@@ -222,7 +222,7 @@ if [ $EUID -eq 0 ]; then
 	# Security #################################################################################	
 	if [[ -f /var/run/reboot-required || ! $(needrestart -k -r l -b 2>/dev/null | grep -c "NEEDRESTART-KSTA: 1") ]]; then
 		echo -e "${red}System restart required!$defcolor"
-	fi;
+	fi
 
 	old_services=$(needrestart -l -r l -b 2>/dev/null | grep -v "NEEDRESTART-VER:" | wc -l)
 	if (( old_services > 0 )); then
@@ -285,7 +285,7 @@ if [ $EUID -eq 0 ]; then
 		fi
 		
 		echo -e "$status_updates$updates packages can be updated.$status_updates_security \n$updates_security updates are security updates.\n$defcolor"
-	fi;
+	fi
 else
 	echo -e "This requires root privileges.
 	$defcolor"

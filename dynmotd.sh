@@ -291,7 +291,10 @@ if [ $EUID -eq 0 ]; then
 		echo -e "$status_updates$updates packages can be updated.$status_updates_security \n$updates_security updates are security updates.\n$defcolor"
 	fi
 # Der Block unterhalb wird unter CentOS nicht benötigt
-else
-	echo -e "This requires root privileges.
-	$defcolor"
-fi
+#linux_centos=$(lsb_release -d | grep "CentOS" | wc -l) 2>/dev/null
+#if (("$linux_centos" == "1")); then
+#	fi
+#else
+#	echo -e "This requires root privileges.
+#	$defcolor"
+#fi

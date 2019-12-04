@@ -224,12 +224,20 @@ if [ $EUID -eq 0 ]; then
 	if (( old_services > 0 )); then
 		echo -e "${yellow}${old_services} services might need a restart.$defcolor command: needrestart"
 	fi
-
+	
+	# Debian
 	if [ -f /var/log/auth.log ]; then
 		ssh_fails=$(cat /var/log/auth.log | grep -i "fail" | wc -l)
 		ssh_first_fail_date=$(head -n1 /var/log/auth.log | awk '{print $1, $2}')
 	
 		echo -e "$ssh_fails failed SSH logins since $ssh_first_fail_date$defcolor"
+	# CentOS
+	 elif [ -f /var/log/secure ]; then
+                ssh_fails=$(cat /var/log/secure | grep -i "fail" | wc -l)
+                ssh_first_fail_date=$(head -n1 /var/log/secure | awk '{print $1, $2}')
+
+                echo -e "$ssh_fails failed SSH logins since $ssh_first_fail_date$defcolor"
+
 	fi
 
 	package_manager_found=0

@@ -294,7 +294,7 @@ if [ $EUID -eq 0 ]; then
 #linux_centos=$(lsb_release -d | grep "CentOS" | wc -l) 2>/dev/null
 #if (("$linux_centos" == "1")); then
 #	fi
-#else
-#	echo -e "This requires root privileges.
-#	$defcolor"
-#fi
+else
+	echo -e "This requires root privileges.
+	$defcolor"
+fi

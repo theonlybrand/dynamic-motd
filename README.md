@@ -1,8 +1,8 @@
 # dynamic-motd
 Dynamic MOTD for short information when logging in via SSH
 
-1.  Debian -> apt-get update && apt-get install figlet lsb-release bc needrestart wget -y
-1.  CentOS -> yum update && yum install figlet redhat-lsb-core bc needrestart wget
+1.  Debian / Ubuntu -> apt-get update && apt-get install figlet lsb-release bc needrestart wget
+1.  CentOS / RHEL -> yum update && yum install figlet redhat-lsb-core bc needrestart wget
 2.  wget -O /usr/local/bin/dynmotd https://raw.githubusercontent.com/theonlybrand/dynamic-motd/master/dynmotd.sh
 3.  chmod +x /usr/local/bin/dynmotd
 4.  rm -f /etc/motd

@@ -9,8 +9,9 @@ Dynamic MOTD for short information when logging in via SSH
 5.  mkdir /usr/local/bin/dynmotd
 6.  touch /etc/profile
 7.  echo /usr/local/bin/dynmotd >> /etc/profile
-8.  touch /etc/zsh/zprofile
-9.  echo /usr/local/bin/dynmotd >> /etc/zsh/zprofile
+8.  mkdir /etc/zsh
+9.  touch /etc/zsh/zprofile
+10.  echo /usr/local/bin/dynmotd >> /etc/zsh/zprofile
 
 
 Upcoming changes
